@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <button @click="handleNavClick">{{buttonText}}</button>
+      <button @click="handleNavClick">{{ buttonText }}</button>
     </div>
   </div>
 </template>
@@ -11,10 +11,7 @@
 
 export default {
   name: "app",
-  components: {
-    TodoList,
-    NewComponent,
-  },
+  components: {},
   data() {
     return {
       showTodoList: false,

@@ -1,13 +1,23 @@
 <template>
   <div id="app">
+    <h1>Welcome to Create Your Own Lesson</h1>
+    <h3>
+      Where you can simply create your child a quick, fun, mini quiz for your
+      child while you are waiting, or are out or your child complains there is
+      <i>nothing to do</i>. Happy Creating!
+    </h3>
+
     <div>
-      <button @click="handleNavClick">{{ buttonText }}</button>
+      <button @click="showCreateAssignment = !showCreateAssignment">
+        {{ buttonTextCreate }}
+      </button>
+      <CreateAssignment v-model="CreateAssignment"> </CreateAssignment>
     </div>
   </div>
 </template>
 
 <script>
-//import TodoList from './components/TodoList.vue';
+import CreateAssignment from "./components/CreateAssignment.vue";
 
 export default {
   name: "app",
@@ -15,21 +25,16 @@ export default {
   data() {
     return {
       showTodoList: false,
-      buttonText: "Show Todo List",
+      buttonTextCreate: "Create New Assignment",
+      CreateAssignment: false,
     };
   },
   methods: {
     handleNavClick() {
-      this.showTodoList = !this.showTodoList;
-      if (this.buttonText === "Show Todo List") {
-        this.buttonText = "Show Welcome Screen";
-      } else {
-        this.buttonText = "Show Todo List";
-      }
+      this.CreateAssignment = true;
     },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

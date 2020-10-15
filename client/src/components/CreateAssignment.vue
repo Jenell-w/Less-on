@@ -1,6 +1,10 @@
 <template>
   <div class="create-assignment-container">
-    <button @click>Create New</button>
+    <!-- <button @click>Create New</button> -->
+    <p>
+      <label>Instructions</label>
+      <input type="text" id="textInstructions" />
+    </p>
   </div>
 </template>
 
@@ -13,5 +17,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
